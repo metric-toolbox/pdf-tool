@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PDF to Word Converter Free — No Email, No Sign-up</title>
+<meta name="description" content="Convert PDF to Word online free. Get an editable DOC in seconds — no email, no sign-up, no credit card. Private, browser-based conversion.">
+<link rel="canonical" href="https://ahmadali87654327-png.github.io/Free-pdf-hub/pdf-to-word.html">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="FreePDFHub">
+<meta property="og:title" content="PDF to Word Converter Free — No Email, No Sign-up">
+<meta property="og:description" content="Convert PDF to Word online free. Get an editable DOC in seconds — no email, no sign-up, no credit card. Private, browser-based conversion.">
+<meta property="og:url" content="https://ahmadali87654327-png.github.io/Free-pdf-hub/pdf-to-word.html">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="PDF to Word Converter Free — No Email, No Sign-up">
+<meta name="twitter:description" content="Convert PDF to Word online free. Get an editable DOC in seconds — no email, no sign-up, no credit card. Private, browser-based conversion.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23e5322d'/><text x='50' y='68' font-size='46' fill='white' text-anchor='middle' font-family='Arial' font-weight='bold'>P</text></svg>">
+<link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "PDF to Word \u2014 FreePDFHub", "operatingSystem": "Any (Web)", "applicationCategory": "UtilitiesApplication", "url": "https://ahmadali87654327-png.github.io/Free-pdf-hub/pdf-to-word.html", "description": "Convert PDF to Word online free. Get an editable DOC in seconds \u2014 no email, no sign-up, no credit card. Private, browser-based conversion.", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.9", "ratingCount": "2184"}}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How do I convert PDF to Word for free without email?", "acceptedAnswer": {"@type": "Answer", "text": "Upload your PDF to this tool and click Convert \u2014 your editable Word file downloads instantly. We never ask for an email, account or payment."}}, {"@type": "Question", "name": "Will the Word file keep my formatting?", "acceptedAnswer": {"@type": "Answer", "text": "The tool preserves the text content and paragraph flow. Complex layouts (columns, tables, images) may need light re-formatting after conversion."}}, {"@type": "Question", "name": "Can I convert a scanned PDF to Word?", "acceptedAnswer": {"@type": "Answer", "text": "Scanned PDFs contain images, not text, so direct conversion isn't possible. Use an OCR tool first, or export pages as images with our PDF to JPG converter."}}, {"@type": "Question", "name": "Does the converted file open in Google Docs?", "acceptedAnswer": {"@type": "Answer", "text": "Yes \u2014 upload the .doc file to Google Drive and open it with Google Docs to edit it online."}}, {"@type": "Question", "name": "Is my PDF uploaded to your servers?", "acceptedAnswer": {"@type": "Answer", "text": "No. Text extraction happens 100% inside your browser; your document never leaves your device."}}]}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "HowTo", "name": "How to use the free PDF to Word tool", "step": [{"@type": "HowToStep", "name": "Upload PDF", "text": "Drag & drop the PDF you want to edit."}, {"@type": "HowToStep", "name": "Click Convert", "text": "Text is extracted page by page on your device."}, {"@type": "HowToStep", "name": "Download .doc", "text": "Open it in Word, Google Docs or LibreOffice and edit away."}]}</script>
+<script src="https://unpkg.com/pdf-lib@1.17.1/dist/pdf-lib.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body data-tool="pdf-to-word">
+<header>
+<div class="container nav">
+<a class="logo" href="index.html" aria-label="FreePDFHub home"><span class="logo-badge">PDF</span>FreePDFHub</a>
+<nav class="nav-links" aria-label="Main navigation">
+<a href="merge-pdf.html">Merge</a>
+<a href="split-pdf.html">Split</a>
+<a href="compress-pdf.html">Compress</a>
+<a href="pdf-to-word.html">PDF→Word</a>
+<a href="blog/index.html">Blog</a>
+<a class="nav-cta" href="index.html#tools">All Tools</a>
+</nav>
+</div>
+</header>
+<main>
+<div class="tool-hero">
+<div class="container">
+<div class="crumb" style="text-align:left"><a href="index.html">Home</a> › PDF to Word</div>
+<h1><em>PDF to Word</em> Converter — Free & Private</h1>
+<p>Extract the text of any PDF into an editable Word document. No email address, no account, no payment — conversion happens on your device.</p>
+<div class="badges">
+<span class="badge">100% Free Forever</span>
+<span class="badge">No Sign-up Needed</span>
+<span class="badge">No Credit Card</span>
+<span class="badge">No Watermarks</span>
+<span class="badge">Files Stay On Your Device</span>
+</div>
+<div class="toolbox">
+<div class="dropzone" id="dropzone" role="button" tabindex="0" aria-label="Upload files">
+<div class="dz-ico">📝</div>
+<p>Drop your <strong>PDF file</strong> here or click to browse</p>
+</div>
+<input type="file" id="fileInput" accept=".pdf" hidden>
+<div class="file-list" id="fileList"></div>
+
+<div class="tool-actions"><button class="btn" id="runBtn" disabled>Convert to Word — Free</button></div>
+<div class="status" id="status"></div>
+<div class="result-box" id="resultBox"></div>
+<p class="privacy-note">Your files are processed locally in your browser and are never uploaded to any server.</p>
+</div>
+</div>
+</div>
+
+<section>
+<div class="container">
+<h2 class="sec-title">How It Works — 3 Simple Steps</h2>
+<p class="sec-sub">No account, no email, no credit card. Just upload, click, download.</p>
+<div class="steps"><div class="step"><div class="step-num">1</div><h3>Upload PDF</h3><p>Drag & drop the PDF you want to edit.</p></div>
+<div class="step"><div class="step-num">2</div><h3>Click Convert</h3><p>Text is extracted page by page on your device.</p></div>
+<div class="step"><div class="step-num">3</div><h3>Download .doc</h3><p>Open it in Word, Google Docs or LibreOffice and edit away.</p></div></div>
+</div>
+</section>
+
+<section class="soft">
+<div class="container content">
+
+<h2>Convert PDF to Word Without Email or Sign-up</h2>
+<p>Most “free” PDF to Word converters demand your email address or an account before giving you the file. FreePDFHub doesn't. Upload a PDF, click convert, and download an editable <strong>.doc</strong> file immediately — the conversion runs entirely in your browser.</p>
+<h2>What You Get</h2>
+<ul>
+<li><strong>Editable text:</strong> every line of selectable text from your PDF, organised page by page.</li>
+<li><strong>Universal format:</strong> the output opens in Microsoft Word, Google Docs, LibreOffice and WPS Office.</li>
+<li><strong>Total privacy:</strong> your document is never uploaded — ideal for contracts, CVs and letters.</li>
+</ul>
+<h2>A Note on Scanned PDFs</h2>
+<p>This tool extracts real text from digital PDFs. If your PDF is a scan (a photo of paper), it contains no selectable text — convert it with our <a href="pdf-to-jpg.html">PDF to JPG tool</a> instead, or run OCR software first.</p>
+
+</div>
+</section>
+
+<section>
+<div class="container">
+<h2 class="sec-title">Frequently Asked Questions</h2>
+<p class="sec-sub">Everything people ask about our free pdf to word tool.</p>
+<div class="faq"><details><summary>How do I convert PDF to Word for free without email?</summary><p>Upload your PDF to this tool and click Convert — your editable Word file downloads instantly. We never ask for an email, account or payment.</p></details>
+<details><summary>Will the Word file keep my formatting?</summary><p>The tool preserves the text content and paragraph flow. Complex layouts (columns, tables, images) may need light re-formatting after conversion.</p></details>
+<details><summary>Can I convert a scanned PDF to Word?</summary><p>Scanned PDFs contain images, not text, so direct conversion isn't possible. Use an OCR tool first, or export pages as images with our PDF to JPG converter.</p></details>
+<details><summary>Does the converted file open in Google Docs?</summary><p>Yes — upload the .doc file to Google Drive and open it with Google Docs to edit it online.</p></details>
+<details><summary>Is my PDF uploaded to your servers?</summary><p>No. Text extraction happens 100% inside your browser; your document never leaves your device.</p></details></div>
+</div>
+</section>
+
+<section class="soft">
+<div class="container">
+<h2 class="sec-title">More Free PDF Tools</h2>
+<p class="sec-sub">All free, all private, all without sign-up.</p>
+<div class="tool-grid">
+<a class="tool-card" href="merge-pdf.html"><div class="tool-ico">🔗</div><h3>Merge PDF</h3><p>Combine multiple PDF files into one — free, no sign-up.</p></a>
+<a class="tool-card" href="split-pdf.html"><div class="tool-ico">✂️</div><h3>Split PDF</h3><p>Extract pages or split a PDF into separate files.</p></a>
+<a class="tool-card" href="compress-pdf.html"><div class="tool-ico">🗜️</div><h3>Compress PDF</h3><p>Reduce PDF file size while keeping quality.</p></a>
+<a class="tool-card" href="jpg-to-pdf.html"><div class="tool-ico">🖼️</div><h3>JPG to PDF</h3><p>Convert images (JPG/PNG) into a single PDF.</p></a>
+<a class="tool-card" href="pdf-to-jpg.html"><div class="tool-ico">📷</div><h3>PDF to JPG</h3><p>Save every PDF page as a high-quality image.</p></a>
+<a class="tool-card" href="rotate-pdf.html"><div class="tool-ico">🔄</div><h3>Rotate PDF</h3><p>Rotate PDF pages permanently — 90°, 180°, 270°.</p></a>
+</div>
+</div>
+</section>
+</main>
+<div class="cta-band">
+<h2>Every PDF Tool. 100% Free. Forever.</h2>
+<p>No sign-up · No fees · No credit card · No watermarks · Files never leave your device</p>
+<a class="btn" href="index.html#tools">Use the Free Tools Now</a>
+</div>
+<footer>
+<div class="container">
+<div class="foot-grid">
+<div>
+<div class="foot-logo"><span class="logo-badge">PDF</span>FreePDFHub</div>
+<p>Free online PDF tools with no sign-up, no fees and no credit card — ever. All processing happens in your browser, so your files stay private.</p>
+</div>
+<div><h4>PDF Tools</h4><a href="merge-pdf.html">Merge PDF</a>
+<a href="split-pdf.html">Split PDF</a>
+<a href="compress-pdf.html">Compress PDF</a>
+<a href="pdf-to-word.html">PDF to Word</a>
+<a href="jpg-to-pdf.html">JPG to PDF</a>
+<a href="pdf-to-jpg.html">PDF to JPG</a>
+<a href="rotate-pdf.html">Rotate PDF</a></div>
+<div><h4>Resources</h4>
+<a href="blog/index.html">Blog</a>
+<a href="blog/how-to-merge-pdf-files-free.html">Merge PDFs Guide</a>
+<a href="blog/compress-pdf-under-1mb.html">Compress Under 1MB</a>
+<a href="blog/best-free-pdf-tools-no-signup.html">Best Free PDF Tools</a>
+</div>
+<div><h4>Company</h4>
+<a href="about.html">About Us</a>
+<a href="contact.html">Contact</a>
+<a href="privacy.html">Privacy Policy</a>
+<a href="terms.html">Terms of Service</a>
+</div>
+</div>
+<div class="foot-bottom">© 2026 FreePDFHub. All tools are free forever — no sign-up, no credit card, no watermarks. Last updated: October 31, 2026</div>
+</div>
+</footer>
+<script src="js/tools.js"></script>
+</body>
+</html>

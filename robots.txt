@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ahmadali87654327-png.github.io/Free-pdf-hub/sitemap.xml

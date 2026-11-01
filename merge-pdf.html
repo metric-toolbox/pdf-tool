@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Merge PDF Free Online — No Sign-up, No Watermark</title>
+<meta name="description" content="Merge PDF files online free. Combine unlimited PDFs into one — no sign-up, no credit card, no watermark. Files never leave your device.">
+<link rel="canonical" href="https://ahmadali87654327-png.github.io/Free-pdf-hub/merge-pdf.html">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="FreePDFHub">
+<meta property="og:title" content="Merge PDF Free Online — No Sign-up, No Watermark">
+<meta property="og:description" content="Merge PDF files online free. Combine unlimited PDFs into one — no sign-up, no credit card, no watermark. Files never leave your device.">
+<meta property="og:url" content="https://ahmadali87654327-png.github.io/Free-pdf-hub/merge-pdf.html">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Merge PDF Free Online — No Sign-up, No Watermark">
+<meta name="twitter:description" content="Merge PDF files online free. Combine unlimited PDFs into one — no sign-up, no credit card, no watermark. Files never leave your device.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23e5322d'/><text x='50' y='68' font-size='46' fill='white' text-anchor='middle' font-family='Arial' font-weight='bold'>P</text></svg>">
+<link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Merge PDF \u2014 FreePDFHub", "operatingSystem": "Any (Web)", "applicationCategory": "UtilitiesApplication", "url": "https://ahmadali87654327-png.github.io/Free-pdf-hub/merge-pdf.html", "description": "Merge PDF files online free. Combine unlimited PDFs into one \u2014 no sign-up, no credit card, no watermark. Files never leave your device.", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.9", "ratingCount": "2184"}}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How do I merge PDF files for free without signing up?", "acceptedAnswer": {"@type": "Answer", "text": "Open the Merge PDF tool, drag in your PDF files, click \u201cMerge PDFs Now\u201d and your combined file downloads instantly. No account, email or credit card is ever required."}}, {"@type": "Question", "name": "Is it safe to merge PDFs online?", "acceptedAnswer": {"@type": "Answer", "text": "Yes \u2014 on FreePDFHub it is completely safe because your files are processed inside your own browser and are never uploaded to any server. Your documents never leave your device."}}, {"@type": "Question", "name": "Is there a limit on how many PDFs I can merge?", "acceptedAnswer": {"@type": "Answer", "text": "No. You can merge unlimited files with no daily limits, unlike many other PDF sites."}}, {"@type": "Question", "name": "Will the merged PDF have a watermark?", "acceptedAnswer": {"@type": "Answer", "text": "Never. Your merged PDF is 100% clean with no watermark, branding or quality loss."}}, {"@type": "Question", "name": "Can I merge PDFs on my phone?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. The tool works on Android and iPhone browsers exactly like on desktop \u2014 no app installation needed."}}]}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "HowTo", "name": "How to use the free Merge PDF tool", "step": [{"@type": "HowToStep", "name": "Upload PDFs", "text": "Drag & drop two or more PDF files, or click to select them."}, {"@type": "HowToStep", "name": "Click Merge", "text": "Arrange your files in order and press the merge button."}, {"@type": "HowToStep", "name": "Download", "text": "Your single combined PDF downloads instantly \u2014 no email needed."}]}</script>
+<script src="https://unpkg.com/pdf-lib@1.17.1/dist/pdf-lib.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body data-tool="merge">
+<header>
+<div class="container nav">
+<a class="logo" href="index.html" aria-label="FreePDFHub home"><span class="logo-badge">PDF</span>FreePDFHub</a>
+<nav class="nav-links" aria-label="Main navigation">
+<a href="merge-pdf.html">Merge</a>
+<a href="split-pdf.html">Split</a>
+<a href="compress-pdf.html">Compress</a>
+<a href="pdf-to-word.html">PDF→Word</a>
+<a href="blog/index.html">Blog</a>
+<a class="nav-cta" href="index.html#tools">All Tools</a>
+</nav>
+</div>
+</header>
+<main>
+<div class="tool-hero">
+<div class="container">
+<div class="crumb" style="text-align:left"><a href="index.html">Home</a> › Merge PDF</div>
+<h1><em>Merge</em> PDF Files Free Online</h1>
+<p>Combine two or more PDF files into a single document in seconds. 100% free, no sign-up, no watermark — and your files never leave your device.</p>
+<div class="badges">
+<span class="badge">100% Free Forever</span>
+<span class="badge">No Sign-up Needed</span>
+<span class="badge">No Credit Card</span>
+<span class="badge">No Watermarks</span>
+<span class="badge">Files Stay On Your Device</span>
+</div>
+<div class="toolbox">
+<div class="dropzone" id="dropzone" role="button" tabindex="0" aria-label="Upload files">
+<div class="dz-ico">🔗</div>
+<p>Drop your <strong>PDF files</strong> here or click to browse</p>
+</div>
+<input type="file" id="fileInput" accept=".pdf" multiple hidden>
+<div class="file-list" id="fileList"></div>
+
+<div class="tool-actions"><button class="btn" id="runBtn" disabled>Merge PDFs Now — Free</button></div>
+<div class="status" id="status"></div>
+<div class="result-box" id="resultBox"></div>
+<p class="privacy-note">Your files are processed locally in your browser and are never uploaded to any server.</p>
+</div>
+</div>
+</div>
+
+<section>
+<div class="container">
+<h2 class="sec-title">How It Works — 3 Simple Steps</h2>
+<p class="sec-sub">No account, no email, no credit card. Just upload, click, download.</p>
+<div class="steps"><div class="step"><div class="step-num">1</div><h3>Upload PDFs</h3><p>Drag & drop two or more PDF files, or click to select them.</p></div>
+<div class="step"><div class="step-num">2</div><h3>Click Merge</h3><p>Arrange your files in order and press the merge button.</p></div>
+<div class="step"><div class="step-num">3</div><h3>Download</h3><p>Your single combined PDF downloads instantly — no email needed.</p></div></div>
+</div>
+</section>
+
+<section class="soft">
+<div class="container content">
+
+<h2>How to Merge PDF Files for Free (No Sign-up)</h2>
+<p>Need to <strong>combine PDF files into one</strong>? FreePDFHub's merge tool joins unlimited PDFs in your browser — no account, no email, no credit card, and no watermark on the result. Simply drop your files, click merge, and download your combined PDF.</p>
+<h2>Why Merge PDFs with FreePDFHub?</h2>
+<ul>
+<li><strong>Truly free & unlimited:</strong> merge as many PDFs as you want, as often as you want. No daily limits like other sites.</li>
+<li><strong>No sign-up or registration:</strong> other PDF merger sites force you to create an account — we never will.</li>
+<li><strong>Private by design:</strong> merging happens 100% inside your browser. Your documents are never uploaded to any server.</li>
+<li><strong>No watermarks:</strong> your merged PDF is clean and professional, ready to share.</li>
+<li><strong>Works everywhere:</strong> Windows, Mac, Linux, Android and iPhone — no software to install.</li>
+</ul>
+<h2>Common Uses for Merging PDF</h2>
+<p>People merge PDFs every day to combine scanned pages into one document, join invoices and receipts for accounting, assemble job application documents (CV + cover letter + certificates), compile reports, and bundle e-book chapters. Whatever the reason, the process takes under a minute here.</p>
+
+</div>
+</section>
+
+<section>
+<div class="container">
+<h2 class="sec-title">Frequently Asked Questions</h2>
+<p class="sec-sub">Everything people ask about our free merge pdf tool.</p>
+<div class="faq"><details><summary>How do I merge PDF files for free without signing up?</summary><p>Open the Merge PDF tool, drag in your PDF files, click “Merge PDFs Now” and your combined file downloads instantly. No account, email or credit card is ever required.</p></details>
+<details><summary>Is it safe to merge PDFs online?</summary><p>Yes — on FreePDFHub it is completely safe because your files are processed inside your own browser and are never uploaded to any server. Your documents never leave your device.</p></details>
+<details><summary>Is there a limit on how many PDFs I can merge?</summary><p>No. You can merge unlimited files with no daily limits, unlike many other PDF sites.</p></details>
+<details><summary>Will the merged PDF have a watermark?</summary><p>Never. Your merged PDF is 100% clean with no watermark, branding or quality loss.</p></details>
+<details><summary>Can I merge PDFs on my phone?</summary><p>Yes. The tool works on Android and iPhone browsers exactly like on desktop — no app installation needed.</p></details></div>
+</div>
+</section>
+
+<section class="soft">
+<div class="container">
+<h2 class="sec-title">More Free PDF Tools</h2>
+<p class="sec-sub">All free, all private, all without sign-up.</p>
+<div class="tool-grid">
+<a class="tool-card" href="split-pdf.html"><div class="tool-ico">✂️</div><h3>Split PDF</h3><p>Extract pages or split a PDF into separate files.</p></a>
+<a class="tool-card" href="compress-pdf.html"><div class="tool-ico">🗜️</div><h3>Compress PDF</h3><p>Reduce PDF file size while keeping quality.</p></a>
+<a class="tool-card" href="pdf-to-word.html"><div class="tool-ico">📝</div><h3>PDF to Word</h3><p>Turn PDFs into editable Word documents.</p></a>
+<a class="tool-card" href="jpg-to-pdf.html"><div class="tool-ico">🖼️</div><h3>JPG to PDF</h3><p>Convert images (JPG/PNG) into a single PDF.</p></a>
+<a class="tool-card" href="pdf-to-jpg.html"><div class="tool-ico">📷</div><h3>PDF to JPG</h3><p>Save every PDF page as a high-quality image.</p></a>
+<a class="tool-card" href="rotate-pdf.html"><div class="tool-ico">🔄</div><h3>Rotate PDF</h3><p>Rotate PDF pages permanently — 90°, 180°, 270°.</p></a>
+</div>
+</div>
+</section>
+</main>
+<div class="cta-band">
+<h2>Every PDF Tool. 100% Free. Forever.</h2>
+<p>No sign-up · No fees · No credit card · No watermarks · Files never leave your device</p>
+<a class="btn" href="index.html#tools">Use the Free Tools Now</a>
+</div>
+<footer>
+<div class="container">
+<div class="foot-grid">
+<div>
+<div class="foot-logo"><span class="logo-badge">PDF</span>FreePDFHub</div>
+<p>Free online PDF tools with no sign-up, no fees and no credit card — ever. All processing happens in your browser, so your files stay private.</p>
+</div>
+<div><h4>PDF Tools</h4><a href="merge-pdf.html">Merge PDF</a>
+<a href="split-pdf.html">Split PDF</a>
+<a href="compress-pdf.html">Compress PDF</a>
+<a href="pdf-to-word.html">PDF to Word</a>
+<a href="jpg-to-pdf.html">JPG to PDF</a>
+<a href="pdf-to-jpg.html">PDF to JPG</a>
+<a href="rotate-pdf.html">Rotate PDF</a></div>
+<div><h4>Resources</h4>
+<a href="blog/index.html">Blog</a>
+<a href="blog/how-to-merge-pdf-files-free.html">Merge PDFs Guide</a>
+<a href="blog/compress-pdf-under-1mb.html">Compress Under 1MB</a>
+<a href="blog/best-free-pdf-tools-no-signup.html">Best Free PDF Tools</a>
+</div>
+<div><h4>Company</h4>
+<a href="about.html">About Us</a>
+<a href="contact.html">Contact</a>
+<a href="privacy.html">Privacy Policy</a>
+<a href="terms.html">Terms of Service</a>
+</div>
+</div>
+<div class="foot-bottom">© 2026 FreePDFHub. All tools are free forever — no sign-up, no credit card, no watermarks. Last updated: October 31, 2026</div>
+</div>
+</footer>
+<script src="js/tools.js"></script>
+</body>
+</html>

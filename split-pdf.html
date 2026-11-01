@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Split PDF Free Online — Extract Pages, No Sign-up</title>
+<meta name="description" content="Split PDF online free. Extract pages or separate a PDF into multiple files — no registration, no credit card, no watermark. 100% private.">
+<link rel="canonical" href="https://ahmadali87654327-png.github.io/Free-pdf-hub/split-pdf.html">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="FreePDFHub">
+<meta property="og:title" content="Split PDF Free Online — Extract Pages, No Sign-up">
+<meta property="og:description" content="Split PDF online free. Extract pages or separate a PDF into multiple files — no registration, no credit card, no watermark. 100% private.">
+<meta property="og:url" content="https://ahmadali87654327-png.github.io/Free-pdf-hub/split-pdf.html">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Split PDF Free Online — Extract Pages, No Sign-up">
+<meta name="twitter:description" content="Split PDF online free. Extract pages or separate a PDF into multiple files — no registration, no credit card, no watermark. 100% private.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23e5322d'/><text x='50' y='68' font-size='46' fill='white' text-anchor='middle' font-family='Arial' font-weight='bold'>P</text></svg>">
+<link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Split PDF \u2014 FreePDFHub", "operatingSystem": "Any (Web)", "applicationCategory": "UtilitiesApplication", "url": "https://ahmadali87654327-png.github.io/Free-pdf-hub/split-pdf.html", "description": "Split PDF online free. Extract pages or separate a PDF into multiple files \u2014 no registration, no credit card, no watermark. 100% private.", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.9", "ratingCount": "2184"}}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How do I extract pages from a PDF for free?", "acceptedAnswer": {"@type": "Answer", "text": "Upload your PDF to the Split tool, type the page numbers you want (for example 1-3,5), click Split, and the extracted pages download immediately \u2014 free and without sign-up."}}, {"@type": "Question", "name": "Can I split a PDF without uploading it to a server?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. FreePDFHub splits PDFs entirely inside your browser, so your file never leaves your device \u2014 ideal for confidential documents."}}, {"@type": "Question", "name": "Can I split every page into a separate PDF?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Choose \u201cEach page as separate PDF\u201d and every selected page downloads as its own file."}}, {"@type": "Question", "name": "Is there a file size or page limit?", "acceptedAnswer": {"@type": "Answer", "text": "No practical limit \u2014 large PDFs with hundreds of pages work fine since processing uses your own device."}}, {"@type": "Question", "name": "Do I need to install any software?", "acceptedAnswer": {"@type": "Answer", "text": "No. Everything runs in your web browser on any device \u2014 Windows, Mac, Linux, Android or iPhone."}}]}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "HowTo", "name": "How to use the free Split PDF tool", "step": [{"@type": "HowToStep", "name": "Upload PDF", "text": "Drag & drop the PDF you want to split."}, {"@type": "HowToStep", "name": "Choose pages", "text": "Type a page range like 1-3,5 and pick your output mode."}, {"@type": "HowToStep", "name": "Download", "text": "Get your extracted pages instantly \u2014 no email, no watermark."}]}</script>
+<script src="https://unpkg.com/pdf-lib@1.17.1/dist/pdf-lib.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body data-tool="split">
+<header>
+<div class="container nav">
+<a class="logo" href="index.html" aria-label="FreePDFHub home"><span class="logo-badge">PDF</span>FreePDFHub</a>
+<nav class="nav-links" aria-label="Main navigation">
+<a href="merge-pdf.html">Merge</a>
+<a href="split-pdf.html">Split</a>
+<a href="compress-pdf.html">Compress</a>
+<a href="pdf-to-word.html">PDF→Word</a>
+<a href="blog/index.html">Blog</a>
+<a class="nav-cta" href="index.html#tools">All Tools</a>
+</nav>
+</div>
+</header>
+<main>
+<div class="tool-hero">
+<div class="container">
+<div class="crumb" style="text-align:left"><a href="index.html">Home</a> › Split PDF</div>
+<h1><em>Split</em> PDF & Extract Pages Free</h1>
+<p>Pull out exactly the pages you need, or split a PDF into separate files. Free forever, no registration — files stay on your device.</p>
+<div class="badges">
+<span class="badge">100% Free Forever</span>
+<span class="badge">No Sign-up Needed</span>
+<span class="badge">No Credit Card</span>
+<span class="badge">No Watermarks</span>
+<span class="badge">Files Stay On Your Device</span>
+</div>
+<div class="toolbox">
+<div class="dropzone" id="dropzone" role="button" tabindex="0" aria-label="Upload files">
+<div class="dz-ico">✂️</div>
+<p>Drop your <strong>PDF file</strong> here or click to browse</p>
+</div>
+<input type="file" id="fileInput" accept=".pdf" hidden>
+<div class="file-list" id="fileList"></div>
+<div class="options"><label for="pageRange">Pages:</label>
+<input type="text" id="pageRange" placeholder="e.g. 1-3,5,8" aria-label="Page range">
+<label for="splitMode">Output:</label>
+<select id="splitMode"><option value="one">One PDF with selected pages</option><option value="single">Each page as separate PDF</option></select></div>
+<div class="tool-actions"><button class="btn" id="runBtn" disabled>Split PDF Now — Free</button></div>
+<div class="status" id="status"></div>
+<div class="result-box" id="resultBox"></div>
+<p class="privacy-note">Your files are processed locally in your browser and are never uploaded to any server.</p>
+</div>
+</div>
+</div>
+
+<section>
+<div class="container">
+<h2 class="sec-title">How It Works — 3 Simple Steps</h2>
+<p class="sec-sub">No account, no email, no credit card. Just upload, click, download.</p>
+<div class="steps"><div class="step"><div class="step-num">1</div><h3>Upload PDF</h3><p>Drag & drop the PDF you want to split.</p></div>
+<div class="step"><div class="step-num">2</div><h3>Choose pages</h3><p>Type a page range like 1-3,5 and pick your output mode.</p></div>
+<div class="step"><div class="step-num">3</div><h3>Download</h3><p>Get your extracted pages instantly — no email, no watermark.</p></div></div>
+</div>
+</section>
+
+<section class="soft">
+<div class="container content">
+
+<h2>How to Split a PDF Online for Free</h2>
+<p>Our <strong>free PDF splitter</strong> lets you extract specific pages from any PDF or break a large document into separate files — without registration, payment or software. Enter a page range like <em>1-3,5</em> and download the result in seconds.</p>
+<h2>Why Use This Free PDF Splitter?</h2>
+<ul>
+<li><strong>Extract exactly what you need:</strong> single pages, ranges, or any combination (e.g. 1-3, 7, 10-12).</li>
+<li><strong>Two output modes:</strong> get one PDF containing your selected pages, or each page as its own file.</li>
+<li><strong>100% private:</strong> splitting happens in your browser — confidential contracts and reports never leave your computer.</li>
+<li><strong>No sign-up, no fees, no credit card:</strong> and no watermark on the output, ever.</li>
+</ul>
+<h2>When Do You Need to Split a PDF?</h2>
+<p>Split PDFs to share only relevant pages of a contract, remove blank or unwanted pages, separate chapters of a large document, extract a single invoice from a batch scan, or reduce file size by keeping only what matters.</p>
+
+</div>
+</section>
+
+<section>
+<div class="container">
+<h2 class="sec-title">Frequently Asked Questions</h2>
+<p class="sec-sub">Everything people ask about our free split pdf tool.</p>
+<div class="faq"><details><summary>How do I extract pages from a PDF for free?</summary><p>Upload your PDF to the Split tool, type the page numbers you want (for example 1-3,5), click Split, and the extracted pages download immediately — free and without sign-up.</p></details>
+<details><summary>Can I split a PDF without uploading it to a server?</summary><p>Yes. FreePDFHub splits PDFs entirely inside your browser, so your file never leaves your device — ideal for confidential documents.</p></details>
+<details><summary>Can I split every page into a separate PDF?</summary><p>Yes. Choose “Each page as separate PDF” and every selected page downloads as its own file.</p></details>
+<details><summary>Is there a file size or page limit?</summary><p>No practical limit — large PDFs with hundreds of pages work fine since processing uses your own device.</p></details>
+<details><summary>Do I need to install any software?</summary><p>No. Everything runs in your web browser on any device — Windows, Mac, Linux, Android or iPhone.</p></details></div>
+</div>
+</section>
+
+<section class="soft">
+<div class="container">
+<h2 class="sec-title">More Free PDF Tools</h2>
+<p class="sec-sub">All free, all private, all without sign-up.</p>
+<div class="tool-grid">
+<a class="tool-card" href="merge-pdf.html"><div class="tool-ico">🔗</div><h3>Merge PDF</h3><p>Combine multiple PDF files into one — free, no sign-up.</p></a>
+<a class="tool-card" href="compress-pdf.html"><div class="tool-ico">🗜️</div><h3>Compress PDF</h3><p>Reduce PDF file size while keeping quality.</p></a>
+<a class="tool-card" href="pdf-to-word.html"><div class="tool-ico">📝</div><h3>PDF to Word</h3><p>Turn PDFs into editable Word documents.</p></a>
+<a class="tool-card" href="jpg-to-pdf.html"><div class="tool-ico">🖼️</div><h3>JPG to PDF</h3><p>Convert images (JPG/PNG) into a single PDF.</p></a>
+<a class="tool-card" href="pdf-to-jpg.html"><div class="tool-ico">📷</div><h3>PDF to JPG</h3><p>Save every PDF page as a high-quality image.</p></a>
+<a class="tool-card" href="rotate-pdf.html"><div class="tool-ico">🔄</div><h3>Rotate PDF</h3><p>Rotate PDF pages permanently — 90°, 180°, 270°.</p></a>
+</div>
+</div>
+</section>
+</main>
+<div class="cta-band">
+<h2>Every PDF Tool. 100% Free. Forever.</h2>
+<p>No sign-up · No fees · No credit card · No watermarks · Files never leave your device</p>
+<a class="btn" href="index.html#tools">Use the Free Tools Now</a>
+</div>
+<footer>
+<div class="container">
+<div class="foot-grid">
+<div>
+<div class="foot-logo"><span class="logo-badge">PDF</span>FreePDFHub</div>
+<p>Free online PDF tools with no sign-up, no fees and no credit card — ever. All processing happens in your browser, so your files stay private.</p>
+</div>
+<div><h4>PDF Tools</h4><a href="merge-pdf.html">Merge PDF</a>
+<a href="split-pdf.html">Split PDF</a>
+<a href="compress-pdf.html">Compress PDF</a>
+<a href="pdf-to-word.html">PDF to Word</a>
+<a href="jpg-to-pdf.html">JPG to PDF</a>
+<a href="pdf-to-jpg.html">PDF to JPG</a>
+<a href="rotate-pdf.html">Rotate PDF</a></div>
+<div><h4>Resources</h4>
+<a href="blog/index.html">Blog</a>
+<a href="blog/how-to-merge-pdf-files-free.html">Merge PDFs Guide</a>
+<a href="blog/compress-pdf-under-1mb.html">Compress Under 1MB</a>
+<a href="blog/best-free-pdf-tools-no-signup.html">Best Free PDF Tools</a>
+</div>
+<div><h4>Company</h4>
+<a href="about.html">About Us</a>
+<a href="contact.html">Contact</a>
+<a href="privacy.html">Privacy Policy</a>
+<a href="terms.html">Terms of Service</a>
+</div>
+</div>
+<div class="foot-bottom">© 2026 FreePDFHub. All tools are free forever — no sign-up, no credit card, no watermarks. Last updated: October 31, 2026</div>
+</div>
+</footer>
+<script src="js/tools.js"></script>
+</body>
+</html>

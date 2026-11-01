@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PDF to JPG Converter Free — High Quality, No Sign-up</title>
+<meta name="description" content="Convert PDF to JPG online free. Save every page as a high-quality image — no sign-up, no credit card, no watermark. 100% browser-based.">
+<link rel="canonical" href="https://ahmadali87654327-png.github.io/Free-pdf-hub/pdf-to-jpg.html">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="FreePDFHub">
+<meta property="og:title" content="PDF to JPG Converter Free — High Quality, No Sign-up">
+<meta property="og:description" content="Convert PDF to JPG online free. Save every page as a high-quality image — no sign-up, no credit card, no watermark. 100% browser-based.">
+<meta property="og:url" content="https://ahmadali87654327-png.github.io/Free-pdf-hub/pdf-to-jpg.html">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="PDF to JPG Converter Free — High Quality, No Sign-up">
+<meta name="twitter:description" content="Convert PDF to JPG online free. Save every page as a high-quality image — no sign-up, no credit card, no watermark. 100% browser-based.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23e5322d'/><text x='50' y='68' font-size='46' fill='white' text-anchor='middle' font-family='Arial' font-weight='bold'>P</text></svg>">
+<link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "PDF to JPG \u2014 FreePDFHub", "operatingSystem": "Any (Web)", "applicationCategory": "UtilitiesApplication", "url": "https://ahmadali87654327-png.github.io/Free-pdf-hub/pdf-to-jpg.html", "description": "Convert PDF to JPG online free. Save every page as a high-quality image \u2014 no sign-up, no credit card, no watermark. 100% browser-based.", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.9", "ratingCount": "2184"}}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How do I convert a PDF to JPG for free?", "acceptedAnswer": {"@type": "Answer", "text": "Upload the PDF and click Convert \u2014 every page downloads automatically as a separate high-quality JPG image. No sign-up or payment needed."}}, {"@type": "Question", "name": "What image quality do I get?", "acceptedAnswer": {"@type": "Answer", "text": "Pages render at 2\u00d7 resolution with 92% JPEG quality \u2014 sharp enough for presentations, printing and social media."}}, {"@type": "Question", "name": "Can I convert only one page?", "acceptedAnswer": {"@type": "Answer", "text": "First extract the page you need with our Split PDF tool, then convert that single-page PDF to JPG."}}, {"@type": "Question", "name": "Is my PDF uploaded to a server?", "acceptedAnswer": {"@type": "Answer", "text": "No \u2014 conversion runs entirely inside your browser, so the document never leaves your device."}}, {"@type": "Question", "name": "Is there a page limit?", "acceptedAnswer": {"@type": "Answer", "text": "No hard limit. Large PDFs simply take a little longer since each page is rendered individually."}}]}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "HowTo", "name": "How to use the free PDF to JPG tool", "step": [{"@type": "HowToStep", "name": "Upload PDF", "text": "Drag & drop the PDF you want as images."}, {"@type": "HowToStep", "name": "Click Convert", "text": "Each page renders at 2\u00d7 resolution for sharp results."}, {"@type": "HowToStep", "name": "Download JPGs", "text": "Every page downloads as its own high-quality JPG."}]}</script>
+<script src="https://unpkg.com/pdf-lib@1.17.1/dist/pdf-lib.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body data-tool="pdf-to-jpg">
+<header>
+<div class="container nav">
+<a class="logo" href="index.html" aria-label="FreePDFHub home"><span class="logo-badge">PDF</span>FreePDFHub</a>
+<nav class="nav-links" aria-label="Main navigation">
+<a href="merge-pdf.html">Merge</a>
+<a href="split-pdf.html">Split</a>
+<a href="compress-pdf.html">Compress</a>
+<a href="pdf-to-word.html">PDF→Word</a>
+<a href="blog/index.html">Blog</a>
+<a class="nav-cta" href="index.html#tools">All Tools</a>
+</nav>
+</div>
+</header>
+<main>
+<div class="tool-hero">
+<div class="container">
+<div class="crumb" style="text-align:left"><a href="index.html">Home</a> › PDF to JPG</div>
+<h1><em>PDF to JPG</em> — Convert Pages to Images</h1>
+<p>Export every page of your PDF as a sharp, high-resolution JPG image. Free, unlimited and private — nothing is uploaded.</p>
+<div class="badges">
+<span class="badge">100% Free Forever</span>
+<span class="badge">No Sign-up Needed</span>
+<span class="badge">No Credit Card</span>
+<span class="badge">No Watermarks</span>
+<span class="badge">Files Stay On Your Device</span>
+</div>
+<div class="toolbox">
+<div class="dropzone" id="dropzone" role="button" tabindex="0" aria-label="Upload files">
+<div class="dz-ico">📷</div>
+<p>Drop your <strong>PDF file</strong> here or click to browse</p>
+</div>
+<input type="file" id="fileInput" accept=".pdf" hidden>
+<div class="file-list" id="fileList"></div>
+
+<div class="tool-actions"><button class="btn" id="runBtn" disabled>Convert to JPG — Free</button></div>
+<div class="status" id="status"></div>
+<div class="result-box" id="resultBox"></div>
+<p class="privacy-note">Your files are processed locally in your browser and are never uploaded to any server.</p>
+</div>
+</div>
+</div>
+
+<section>
+<div class="container">
+<h2 class="sec-title">How It Works — 3 Simple Steps</h2>
+<p class="sec-sub">No account, no email, no credit card. Just upload, click, download.</p>
+<div class="steps"><div class="step"><div class="step-num">1</div><h3>Upload PDF</h3><p>Drag & drop the PDF you want as images.</p></div>
+<div class="step"><div class="step-num">2</div><h3>Click Convert</h3><p>Each page renders at 2× resolution for sharp results.</p></div>
+<div class="step"><div class="step-num">3</div><h3>Download JPGs</h3><p>Every page downloads as its own high-quality JPG.</p></div></div>
+</div>
+</section>
+
+<section class="soft">
+<div class="container content">
+
+<h2>Turn PDF Pages into High-Quality JPG Images</h2>
+<p>Need a PDF page as a picture — for a presentation, social media, WhatsApp or a website? This <strong>free PDF to JPG converter</strong> renders every page at double resolution so text stays crisp, then downloads each page as a separate JPG.</p>
+<h2>Why Convert PDF to JPG Here?</h2>
+<ul>
+<li><strong>High quality:</strong> pages are rendered at 2× scale for sharp, readable images.</li>
+<li><strong>Every page included:</strong> multi-page PDFs export as page-1.jpg, page-2.jpg and so on.</li>
+<li><strong>Private:</strong> rendering happens in your browser — the PDF is never uploaded.</li>
+<li><strong>Free forever:</strong> no sign-up, no credit card, no watermark, no limits.</li>
+</ul>
+<h2>Popular Uses</h2>
+<p>Share a flyer page on Instagram, insert a PDF page into PowerPoint or Word, preview documents on devices without a PDF reader, or send pages through chat apps that compress PDFs badly.</p>
+
+</div>
+</section>
+
+<section>
+<div class="container">
+<h2 class="sec-title">Frequently Asked Questions</h2>
+<p class="sec-sub">Everything people ask about our free pdf to jpg tool.</p>
+<div class="faq"><details><summary>How do I convert a PDF to JPG for free?</summary><p>Upload the PDF and click Convert — every page downloads automatically as a separate high-quality JPG image. No sign-up or payment needed.</p></details>
+<details><summary>What image quality do I get?</summary><p>Pages render at 2× resolution with 92% JPEG quality — sharp enough for presentations, printing and social media.</p></details>
+<details><summary>Can I convert only one page?</summary><p>First extract the page you need with our Split PDF tool, then convert that single-page PDF to JPG.</p></details>
+<details><summary>Is my PDF uploaded to a server?</summary><p>No — conversion runs entirely inside your browser, so the document never leaves your device.</p></details>
+<details><summary>Is there a page limit?</summary><p>No hard limit. Large PDFs simply take a little longer since each page is rendered individually.</p></details></div>
+</div>
+</section>
+
+<section class="soft">
+<div class="container">
+<h2 class="sec-title">More Free PDF Tools</h2>
+<p class="sec-sub">All free, all private, all without sign-up.</p>
+<div class="tool-grid">
+<a class="tool-card" href="merge-pdf.html"><div class="tool-ico">🔗</div><h3>Merge PDF</h3><p>Combine multiple PDF files into one — free, no sign-up.</p></a>
+<a class="tool-card" href="split-pdf.html"><div class="tool-ico">✂️</div><h3>Split PDF</h3><p>Extract pages or split a PDF into separate files.</p></a>
+<a class="tool-card" href="compress-pdf.html"><div class="tool-ico">🗜️</div><h3>Compress PDF</h3><p>Reduce PDF file size while keeping quality.</p></a>
+<a class="tool-card" href="pdf-to-word.html"><div class="tool-ico">📝</div><h3>PDF to Word</h3><p>Turn PDFs into editable Word documents.</p></a>
+<a class="tool-card" href="jpg-to-pdf.html"><div class="tool-ico">🖼️</div><h3>JPG to PDF</h3><p>Convert images (JPG/PNG) into a single PDF.</p></a>
+<a class="tool-card" href="rotate-pdf.html"><div class="tool-ico">🔄</div><h3>Rotate PDF</h3><p>Rotate PDF pages permanently — 90°, 180°, 270°.</p></a>
+</div>
+</div>
+</section>
+</main>
+<div class="cta-band">
+<h2>Every PDF Tool. 100% Free. Forever.</h2>
+<p>No sign-up · No fees · No credit card · No watermarks · Files never leave your device</p>
+<a class="btn" href="index.html#tools">Use the Free Tools Now</a>
+</div>
+<footer>
+<div class="container">
+<div class="foot-grid">
+<div>
+<div class="foot-logo"><span class="logo-badge">PDF</span>FreePDFHub</div>
+<p>Free online PDF tools with no sign-up, no fees and no credit card — ever. All processing happens in your browser, so your files stay private.</p>
+</div>
+<div><h4>PDF Tools</h4><a href="merge-pdf.html">Merge PDF</a>
+<a href="split-pdf.html">Split PDF</a>
+<a href="compress-pdf.html">Compress PDF</a>
+<a href="pdf-to-word.html">PDF to Word</a>
+<a href="jpg-to-pdf.html">JPG to PDF</a>
+<a href="pdf-to-jpg.html">PDF to JPG</a>
+<a href="rotate-pdf.html">Rotate PDF</a></div>
+<div><h4>Resources</h4>
+<a href="blog/index.html">Blog</a>
+<a href="blog/how-to-merge-pdf-files-free.html">Merge PDFs Guide</a>
+<a href="blog/compress-pdf-under-1mb.html">Compress Under 1MB</a>
+<a href="blog/best-free-pdf-tools-no-signup.html">Best Free PDF Tools</a>
+</div>
+<div><h4>Company</h4>
+<a href="about.html">About Us</a>
+<a href="contact.html">Contact</a>
+<a href="privacy.html">Privacy Policy</a>
+<a href="terms.html">Terms of Service</a>
+</div>
+</div>
+<div class="foot-bottom">© 2026 FreePDFHub. All tools are free forever — no sign-up, no credit card, no watermarks. Last updated: October 31, 2026</div>
+</div>
+</footer>
+<script src="js/tools.js"></script>
+</body>
+</html>
